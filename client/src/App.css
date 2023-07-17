@@ -36,3 +36,11 @@
     transform: rotate(360deg);
   }
 }
+
+.nav {
+  background-color: #282c34;
+  color: white;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+}
