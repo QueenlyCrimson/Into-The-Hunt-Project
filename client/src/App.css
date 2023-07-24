@@ -44,3 +44,16 @@
   display: flex;
   flex-direction: row;
 }
+
+.book {
+  margin: 10vh;
+  padding: 3vh;
+  border: white 1vh solid;
+  max-width: 43vh;
+  color: white;
+}
+
+.bookholder {
+  margin: auto;
+  display: flex;
+}

@@ -1,9 +1,11 @@
 const Book = () => {
 
   return(
-    <div>
-      <div></div>
-    </div>
+    
+      <div className="book">
+        This is a book.
+      </div>
+    
   )
 }
 
