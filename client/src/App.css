@@ -48,7 +48,7 @@
 .book {
   margin: 10vh;
   padding: 3vh;
-  border: white 1vh solid;
+  border: white 1vh solid; 
   max-width: 43vh;
   color: white;
 }
