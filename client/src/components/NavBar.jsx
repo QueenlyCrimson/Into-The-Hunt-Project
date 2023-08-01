@@ -10,7 +10,7 @@ const NavBar = () => {
           <h1>Libratica</h1>
           <div className="navitemholder2">
             <h3 className="navitem"><Link to="/" >Home</Link></h3>
-            <h3 className="navitem"><Link to="/" >Add Story</Link></h3>
+            <h3 className="navitem"><Link to="/addbook" >Add Story</Link></h3>
             <h3 className="navitem"><Link to="/" >About</Link></h3>
           </div>
         </div>

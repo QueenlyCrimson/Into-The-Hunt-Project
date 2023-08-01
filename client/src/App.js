@@ -2,6 +2,7 @@ import "./App.css";
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import BookPage from "./pages/BookPage";
+import AddBookPage from "./pages/AddBookPage";
 import { Routes, Route } from "react-router-dom";
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/book" element={<BookPage />} />
+          <Route path="/addbook" element={<AddBookPage />} />
         </Routes>
       </main>
     </div>
