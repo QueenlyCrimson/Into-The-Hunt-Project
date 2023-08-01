@@ -45,6 +45,29 @@
   flex-direction: row;
 }
 
+h1 {
+  padding-left: 3vh;
+}
+
+.navitemholder {
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+nav {
+  margin:auto
+}
+
+
+
+.navitemholder2 {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+}
+
 .book {
   margin: 10vh;
   padding: 3vh;
@@ -57,3 +80,21 @@
   margin: auto;
   display: flex;
 }
+
+.navitem {
+  list-style-type: none;
+  margin:auto;
+  text-decoration: none;
+}
+
+a { text-decoration: none; }
+a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:focus { text-decoration: none; }
+a:hover, a:active { text-decoration: none; }
+
+.navitem { text-decoration: none; }
+.navitem:visited { text-decoration: none; }
+.navitem:hover { text-decoration: none; }
+.navitem:focus { text-decoration: none; }
+.navitem:hover, .navitem:active { text-decoration: none; }
