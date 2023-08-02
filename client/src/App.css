@@ -93,8 +93,9 @@ a:hover { text-decoration: none; }
 a:focus { text-decoration: none; }
 a:hover, a:active { text-decoration: none; }
 
-.navitem { text-decoration: none; }
-.navitem:visited { text-decoration: none; }
-.navitem:hover { text-decoration: none; }
-.navitem:focus { text-decoration: none; }
-.navitem:hover, .navitem:active { text-decoration: none; }
+h3 { text-decoration: none; }
+h3:visited { text-decoration: none; }
+h3:hover { text-decoration: none; }
+h3:focus { text-decoration: none; }
+h3:hover, h3:active { text-decoration: none; }
+
