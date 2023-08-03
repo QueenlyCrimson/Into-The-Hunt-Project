@@ -19,3 +19,5 @@ router.get("/chapter/:id", controllers.getChapterByBook);
 router.put("/chapter/:id", controllers.updateChapter);
 
 router.delete("/chapter/:id", controllers.deleteChapter);
+
+module.exports = router;
