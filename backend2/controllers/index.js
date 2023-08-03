@@ -28,8 +28,8 @@ const getAllBooks = async (req, res) => {
 
 const getBookByName = async (req, res) => {
   try {
-    const { Name } = req.params;
-    const book = await Book.findById(Name);
+    const { id } = req.params;
+    const book = await Book.findById(id);
     if (book) {
       return res.status(200).json({ book });
     }
@@ -77,8 +77,8 @@ const createChapter = async (req, res) => {
 
 const getChapterByBook = async (req, res) => {
   try {
-    const { Book } = req.params;
-    const chapter = await Chapter.findById(Book);
+    const { id } = req.params;
+    const chapter = await Chapter.findById(id);
     if (chapter) {
       return res.status(200).json({ chapter });
     }
@@ -95,7 +95,7 @@ const updateChapter = async (req, res) => {
     const chapter = await Chapter.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
-    res.status(200).json(book);
+    res.status(200).json(chapter);
   } catch (error) {
     return res.status(500).json({ error: error.message });
   }
