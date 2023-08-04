@@ -4,6 +4,7 @@ const { Schema } = require("mongoose");
 const Book = new Schema(
   {
     title: { type: String, required: true },
+    storage_title: { type: String },
     author: { type: String, required: true },
     image: { type: String, required: true },
   },

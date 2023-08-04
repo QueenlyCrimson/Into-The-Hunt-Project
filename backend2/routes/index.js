@@ -14,10 +14,12 @@ router.get("/books/:id", controllers.getBookByName);
 
 router.post("/chapter", controllers.createChapter);
 
-router.get("/chapter/:id", controllers.getChapterByBook);
+// router.get("/chapter/:id", controllers.getChapterByBook);
 
 router.put("/chapter/:id", controllers.updateChapter);
 
 router.delete("/chapter/:id", controllers.deleteChapter);
+
+router.get("/chapter/:id/:chapNum", controllers.getChaptersByBook);
 
 module.exports = router;

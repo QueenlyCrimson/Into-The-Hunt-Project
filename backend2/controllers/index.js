@@ -90,6 +90,25 @@ const getChapterByBook = async (req, res) => {
   }
 };
 
+const getChaptersByBook = async (req, res) => {
+  try {
+    const { id, chapNum } = req.params;
+
+    const chapter = await Chapter.find({
+      book_name: id,
+      chapter_number: chapNum,
+    });
+    if (chapter) {
+      return res.status(200).json({ chapter });
+    }
+    return res
+      .status(404)
+      .send("Chapter with the specified name does not exist!");
+  } catch (error) {
+    return res.status(500).json({ error: error.message });
+  }
+};
+
 const updateChapter = async (req, res) => {
   try {
     const chapter = await Chapter.findByIdAndUpdate(req.params.id, req.body, {
@@ -124,4 +143,5 @@ module.exports = {
   getChapterByBook,
   updateChapter,
   deleteChapter,
+  getChaptersByBook,
 };

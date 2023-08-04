@@ -54,6 +54,10 @@ h1 {
   padding-left: 3vh;
 }
 
+.bookContent {
+  color: white;
+}
+
 .navitemholder {
   min-width: 100%;
   display: flex;
