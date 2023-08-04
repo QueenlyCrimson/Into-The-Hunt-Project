@@ -1,14 +1,28 @@
 import Book from "./Book"
+import { useEffect, useState } from "react"
+import axios from "axios"
 
 const Bookholder = () => {
 
+  const [bookCollection, setBookCollection] = useState([])
+
+  const getBooks = async () => {
+    const props = await axios.get('http://localhost:3001/api/')
+    console.log(props)
+    setBookCollection(props.data.books)
+  }
+
+  useEffect(()=> {
+    getBooks()
+  }, [])
+
   return(
     <div className="bookholder">
-      <Book />
-      <Book />
-      <Book />
-      <Book />
-      <Book />
+      {bookCollection.map((book) => (
+        <div key={book._id}> 
+          <Book book={book}/>
+        </div>
+      ))}
     </div>
   )
 }

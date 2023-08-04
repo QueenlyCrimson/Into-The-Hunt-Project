@@ -9,11 +9,11 @@ const createBook = async (req, res) => {
   try {
     const book = await new Book(req.body);
     await book.save();
-    return res.status(201).josn({
+    return res.status(201).json({
       book,
     });
   } catch (error) {
-    return res.status(500).josn({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 };
 
@@ -53,7 +53,7 @@ const updateBook = async (req, res) => {
 const deleteBook = async (req, res) => {
   try {
     const { id } = req.params;
-    const deleted = await Book.findByIdAndUpdate(id);
+    const deleted = await Book.findByIdAndDelete(id);
     if (deleted) {
       return res.status(200).send("Book deleted");
     }
@@ -71,7 +71,7 @@ const createChapter = async (req, res) => {
       chapter,
     });
   } catch (error) {
-    return res.status(500).josn({ error: error.message });
+    return res.status(500).json({ error: error.message });
   }
 };
 
@@ -104,7 +104,7 @@ const updateChapter = async (req, res) => {
 const deleteChapter = async (req, res) => {
   try {
     const { id } = req.params;
-    const deleted = await Chapter.findByIdAndUpdate(id);
+    const deleted = await Chapter.findByIdAndDelete(id);
     if (deleted) {
       return res.status(200).send("Book deleted");
     }

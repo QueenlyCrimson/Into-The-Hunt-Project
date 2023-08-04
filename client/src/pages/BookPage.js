@@ -1,5 +1,13 @@
+import { useParams } from "react-router-dom";
+
 const BookPage = () => {
-  return <div>hello</div>;
+  let { id } = useParams();
+
+  return (
+    <div>
+      <div></div>
+    </div>
+  );
 };
 
 export default BookPage;

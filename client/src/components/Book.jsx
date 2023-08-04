@@ -1,13 +1,18 @@
-const Book = () => {
+import Bookholder from "./Bookholder"
+import { Link } from 'react-router-dom'
+
+const Book = (props) => {
+
+  let book = props.book
 
   return(
-      <a  href="http://localhost:3000/book">
+      <Link to={`/book/${book._id}`} >
         <div className="book">
-          <p>Into The Dark</p>
-          <img src="https://www.fanfiction.net/image/6787522/75/" alt="into the dark"></img>
-          <span></span>
+          <p>{book.title}</p>
+          <img src={book.image} alt={book.title}></img>
+          <p>{book.author}</p>
         </div>
-      </a>
+      </Link>
     
   )
 }

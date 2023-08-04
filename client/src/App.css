@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  margin: auto
 }
 
 .App-logo {
@@ -37,6 +38,10 @@
   }
 }
 
+main {
+  margin:auto;
+}
+
 .nav {
   background-color: #282c34;
   color: white;
@@ -59,7 +64,9 @@ nav {
   margin:auto
 }
 
-
+.home {
+  margin: auto;
+}
 
 .navitemholder2 {
   margin: auto;
