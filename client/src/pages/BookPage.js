@@ -33,10 +33,12 @@ const BookPage = () => {
     handleBook();
   }, []);
   return (
-    <div
-      className="bookContent"
-      dangerouslySetInnerHTML={{ __html: chapterContent }}
-    ></div>
+    <div>
+      <div
+        className="bookContent"
+        dangerouslySetInnerHTML={{ __html: chapterContent }}
+      ></div>
+    </div>
   );
 };
 
