@@ -62,7 +62,14 @@ const AddChapterPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    axios.post("http://localhost:3001/api/chapter");
+    axios
+      .post("http://localhost:3001/api/chapter", newChapter)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
   };
 
   // useEffect(() => {
@@ -71,8 +78,8 @@ const AddChapterPage = () => {
 
   return (
     <div>
-      <div>
-        <p>New Chapter for {chapterName}</p>
+      <div className="whitetext">
+        <p>New Chapter</p>
         <form onSubmit={handleSubmit} class="form">
           <input
             type="text"

@@ -110,3 +110,6 @@ h3:hover { text-decoration: none; }
 h3:focus { text-decoration: none; }
 h3:hover, h3:active { text-decoration: none; }
 
+.whitetext {
+  color:white;
+}
