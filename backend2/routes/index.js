@@ -14,7 +14,7 @@ router.get("/books/:id", controllers.getBookByName);
 
 router.post("/chapter", controllers.createChapter);
 
-// router.get("/chapter/:id", controllers.getChapterByBook);
+router.get("/chapterget/:id", controllers.getAllChaptersByBook);
 
 router.put("/chapter/:id", controllers.updateChapter);
 

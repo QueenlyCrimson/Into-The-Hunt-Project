@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 var parse = require("html-react-parser");
 
 const BookPage = () => {
@@ -38,6 +38,9 @@ const BookPage = () => {
         className="bookContent"
         dangerouslySetInnerHTML={{ __html: chapterContent }}
       ></div>
+      <div>
+        <Link to={`/addchapter/${id}`}>Add Chapter</Link>
+      </div>
     </div>
   );
 };
