@@ -12,7 +12,7 @@ const BookPage = () => {
   const [chapterContent, setChapterContent] = useState([]);
   const [book, setBook] = useState([]);
 
-  const startFunction = (chapterNumber) => {
+  const startFunction = () => {
     let chapterNumber = 1;
     console.log(chapterNumber);
     handleBook();
@@ -49,8 +49,8 @@ const BookPage = () => {
     handleBook();
   };
 
-  useEffect((chapterNumber) => {
-    startFunction(chapterNumber);
+  useEffect(() => {
+    startFunction();
   }, []);
 
   return (
