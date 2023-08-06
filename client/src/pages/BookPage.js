@@ -18,14 +18,16 @@ const BookPage = () => {
   };
 
   const handleBook = async () => {
-    const bookName = await axios.get(`http://localhost:3001/api/books/${id}`);
+    const bookName = await axios.get(
+      `https://libratica-backend.onrender.com/api/books/${id}`
+    );
     setBook(bookName.data.book);
     handleChapter(bookName.data.book.storage_title);
   };
 
   const handleChapter = async (title) => {
     const chapter = await axios.get(
-      `http://localhost:3001/api/chapter/${title}/${chapterNumber}`
+      `https://libratica-backend.onrender.com/api/chapter/${title}/${chapterNumber}`
     );
 
     // setChapter(chapter.data);

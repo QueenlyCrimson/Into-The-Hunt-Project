@@ -7,7 +7,7 @@ const Bookholder = () => {
   const [bookCollection, setBookCollection] = useState([])
 
   const getBooks = async () => {
-    const props = await axios.get('http://localhost:3001/api/')
+    const props = await axios.get('https://libratica-backend.onrender.com/api/')
     console.log(props)
     setBookCollection(props.data.books)
   }

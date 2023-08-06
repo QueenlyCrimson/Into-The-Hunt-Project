@@ -20,7 +20,7 @@ const AddBookPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/api/book", newForm)
+      .post("https://libratica-backend.onrender.com/api/book", newForm)
       .then((response) => {
         console.log(response);
       })
@@ -28,7 +28,7 @@ const AddBookPage = () => {
         console.error(error);
       });
     axios
-      .post("http://localhost:3001/api/chapter", newChapter)
+      .post("https://libratica-backend.onrender.com/api/chapter", newChapter)
       .then((response) => {
         console.log(response);
       });
