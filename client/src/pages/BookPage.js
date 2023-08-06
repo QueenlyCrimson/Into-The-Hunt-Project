@@ -13,7 +13,8 @@ const BookPage = () => {
   const [book, setBook] = useState([]);
 
   const startFunction = () => {
-    setChapterNumber("1");
+    setChapterNumber(1);
+    console.log(chapterNumber);
     handleBook();
   };
 
