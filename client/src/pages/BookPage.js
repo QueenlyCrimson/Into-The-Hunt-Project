@@ -8,12 +8,12 @@ const BookPage = () => {
   let { id } = useParams();
 
   const [chapter, setChapter] = useState([]);
-  let [chapterNumber, setChapterNumber] = useState([]);
+  let chapterNumber = ``;
   const [chapterContent, setChapterContent] = useState([]);
   const [book, setBook] = useState([]);
 
-  const startFunction = () => {
-    setChapterNumber(1);
+  const startFunction = (chapterNumber) => {
+    let chapterNumber = 1;
     console.log(chapterNumber);
     handleBook();
   };
@@ -49,8 +49,8 @@ const BookPage = () => {
     handleBook();
   };
 
-  useEffect(() => {
-    startFunction();
+  useEffect((chapterNumber) => {
+    startFunction(chapterNumber);
   }, []);
 
   return (
