@@ -4,16 +4,16 @@ import { Link, useParams } from "react-router-dom";
 import PrevPage from "../components/PrevPage";
 var parse = require("html-react-parser");
 
-const BookPage = () => {
+const BookPage = ({ chapterNumber, setChapterNumber }) => {
   let { id } = useParams();
 
   const [chapter, setChapter] = useState([]);
-  let chapterNumber = ``;
+
   const [chapterContent, setChapterContent] = useState([]);
   const [book, setBook] = useState([]);
 
   const startFunction = () => {
-    let chapterNumber = 1;
+    setChapterNumber(1);
     console.log(chapterNumber);
     handleBook();
   };
